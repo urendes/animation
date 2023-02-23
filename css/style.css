@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    background-color: brown;
+    
+}
+
+body {
+    display: grid;
+    position: relative;
+    top: 230px;
+    margin: auto;
+    max-width: 200px;
+    height: 180px;
+    grid-template: repeat(3, 1fr)/ repeat(3, 1fr);
+    grid-template-areas: "dot1 dot2 dot3"
+                         "dot4 dot5 dot6"; 
+}
+
+.dot1 {
+    grid-area: dot1;
+    background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+
+    animation: effect2 2.5s ease-in-out 1s forwards, bubble1 1.5s ease-in-out 3.5s, effect1 2.5s ease-in-out 5s forwards;
+    
+}
+
+.dot2 {
+    grid-area: dot2;
+    background: radial-gradient(circle at 90px 90px, #5cabff, #000);
+
+    animation: effect2 2.5s ease-in-out 1s forwards, bubble 1.5s ease-in-out 3.5s, effect1 2.5s ease-in-out 5s forwards;
+}
+
+.dot3 {
+    grid-area: dot3;
+    background: radial-gradient(circle at 65px 65px, #5cabff, #000);
+
+    animation: effect2 2.5s ease-in-out 1s forwards, bubble1 1.5s ease-in-out 3.5s, effect1 2.5s ease-in-out 5s forwards;
+
+}
+
+.dot4 {
+    grid-area: dot4;
+    background: radial-gradient(circle at 95px 95px, #5cabff, #000);
+
+    animation: effect2 2.5s ease-in-out 1s forwards, bubble 1.5s ease-in-out 3.5s, effect1 2.5s ease-in-out 5s forwards;
+
+}
+
+.dot5 {
+    grid-area: dot5;
+    background: radial-gradient(circle at 75px 75px, #5cabff, #000);
+
+    animation: effect2 2.5s ease-in-out 1s forwards, bubble1 1.5s ease-in-out 3.5s, effect1 2.5s ease-in-out 5s forwards;
+
+}
+
+.dot6 {
+    grid-area: dot6;
+    background: radial-gradient(circle at 60px 60px, #5cabff, #000);
+
+    animation: effect2 2.5s ease-in-out 1s forwards, bubble 1.5s ease-in-out 3.5s, effect1 2.5s ease-in-out 5s forwards;
+
+}
+
+
+
+
+@keyframes effect2 {
+    0% {
+        transform: rotate(0);
+        border-radius: initial;
+    }
+    
+    30% {
+        transform: rotate(359deg);
+        border-radius: 90%;
+    }
+    
+    100% {
+        transform: rotate(-359deg);
+        border-radius: 50%;
+    }
+ }
+
+
+@keyframes effect1 {
+    0% {
+        transform: rotate(-359deg);
+        border-radius: 50%;
+    }
+    
+    30% {
+        transform: rotate(359deg);
+        border-radius: 90%;
+    }
+    
+    100% {
+        transform: rotate(0);
+        border-radius: initial;
+    }
+ }
+
+ @keyframes bubble {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scaleY(0.85) scaleX(1.05);
+    }
+    48% {
+      transform: scaleY(1.1) scaleX(0.9);
+    }
+    68% {
+      transform: scaleY(0.88) scaleX(1.02);
+    }
+    80% {
+      transform: scaleY(1.02) scaleX(0.98);
+    }
+    97%, 100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes bubble1 {
+    0% {
+      transform: scale(1);
+    }
+    20% {
+      transform: scaleY(0.95) scaleX(1.10);
+    }
+    48% {
+      transform: scaleY(1.1) scaleX(0.8);
+    }
+    68% {
+      transform: scaleY(0.98) scaleX(1.12);
+    }
+    80% {
+      transform: scaleY(1.02) scaleX(0.88);
+    }
+    97%, 100% {
+      transform: scale(1);
+    }
+  }
